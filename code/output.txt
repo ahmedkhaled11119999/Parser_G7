@@ -1,0 +1,32 @@
+read , reserved words 
+x , ID  
+; , semi column
+if , reserved words 
+0 , NUM  
+< , smaller than
+x , ID  
+then , reserved words 
+fact , ID  
+:= , assign
+1 , NUM  
+; , semi column
+repeat , reserved words 
+fact , ID  
+:= , assign
+fact , ID  
+* , multiplication
+x , ID  
+; , semi column
+x , ID  
+:= , assign
+x , ID  
+- , subtracion
+1 , NUM  
+until , reserved words 
+x , ID  
+= , conditional equal
+0 , NUM  
+; , semi column
+write , reserved words 
+fact , ID  
+end , reserved words 
