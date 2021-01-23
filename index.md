@@ -3,12 +3,15 @@
 
 ### Markdown
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/weiji14/deepbedmap/)
+
+
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
+Syntax highlighted cod block
 
-# Header 1
+
 ### Header 3
 
 - Bulleted
