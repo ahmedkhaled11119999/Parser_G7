@@ -1,4 +1,3 @@
-# PyNNN
 # Contents
  - [**Install our package**](#Install_our_package)
  - [**Potential Output**](#Example)
