@@ -211,6 +211,7 @@ Todo list:
 1. we use "download_and_parse_mnist_file" function to download our files which is in .rar format in data directory and uncompress our files inside this function
 2. it calls "parse_idx" function inside it to check that there is no error in it.
 3. start print download progress
+
 ```python
 def print_download_progress(count, block_size, total_size):
     pct_complete = int(count * block_size * 100 / total_size)
@@ -219,7 +220,9 @@ def print_download_progress(count, block_size, total_size):
     sys.stdout.write(msg)
     sys.stdout.flush()
 ```
+
 4. putting Training_Data , Tarining_labels , Testing_Data,Testing_lables in four seperated functions to get the from our files
+
 ```python
 def train_images():
     return download_and_parse_mnist_file('train-images-idx3-ubyte.gz')
@@ -237,6 +240,7 @@ def test_labels():
     return download_and_parse_mnist_file('t10k-labels-idx1-ubyte.gz')
 
 ```
+
 ### **2. Preprocessing Data:** <a name="Preprocessing_data"></a>
 In this script we just :
 
@@ -257,14 +261,18 @@ def GetData():
 
     print('Preparing data......')
 ```
+
   3. Reshaping and normalization training dataset and its labels
+  
 ```python
     training_data = train_images.reshape(60000, 1, 28, 28)
     training_data=training_data/255
     training_labels= train_labels.reshape (-1,1)
 
 ```
+
  4. Reshaping and normalization testing dataset and its labels
+ 
 ```python
     testing_data = test_images.reshape(10000, 1, 28, 28)
     testing_data=testing_data/255
@@ -273,6 +281,7 @@ def GetData():
     return training_data,training_labels,testing_data,testing_labels
 
 ```
+
 -----
 
 ## Net <a name="Net"></a>
