@@ -208,9 +208,9 @@ In this Dataloader script we download our dataset from "http://yann.lecun.com/ex
 
 Todo list:
 
-1. we use "download_and_parse_mnist_file" function to download our files which is in .rar format in data directory and uncompress our files inside this function
-2. it calls "parse_idx" function inside it to check that there is no error in it.
-3. start print download progress
+ - we use "download_and_parse_mnist_file" function to download our files which is in .rar format in data directory and uncompress our files inside this function
+ - it calls "parse_idx" function inside it to check that there is no error in it.
+ - start print download progress
 
 ```python
 def print_download_progress(count, block_size, total_size):
@@ -221,7 +221,7 @@ def print_download_progress(count, block_size, total_size):
     sys.stdout.flush()
 ```
 
-4. putting Training_Data , Tarining_labels , Testing_Data,Testing_lables in four seperated functions to get the from our files
+ - putting Training_Data , Tarining_labels , Testing_Data,Testing_lables in four seperated functions to get the from our files
 
 ```python
 def train_images():
@@ -244,9 +244,9 @@ def test_labels():
 ### **2. Preprocessing Data:** <a name="Preprocessing_data"></a>
 In this script we just :
 
-1. Import our DataLoader script and use it to get our training and testing data with their labels.
+ - Import our DataLoader script and use it to get our training and testing data with their labels.
 
-2. Prepare our dataset by normalizing ,reshape and make them 2-D array 
+ - Prepare our dataset by normalizing ,reshape and make them 2-D array 
 
 ```python
 def GetData():
@@ -262,7 +262,7 @@ def GetData():
     print('Preparing data......')
 ```
 
-  3. Reshaping and normalization training dataset and its labels
+ - Reshaping and normalization training dataset and its labels
   
 ```python
     training_data = train_images.reshape(60000, 1, 28, 28)
@@ -271,7 +271,7 @@ def GetData():
 
 ```
 
- 4. Reshaping and normalization testing dataset and its labels
+ - Reshaping and normalization testing dataset and its labels
  
 ```python
     testing_data = test_images.reshape(10000, 1, 28, 28)
@@ -287,7 +287,7 @@ def GetData():
 ## Net <a name="Net"></a>
 This script was used to test our CNN accuracy it consists of one class "Net"
 
-1. We check that both of loss_fn and layer that will be the input to our CNN is one of our loss functions and layers 
+- We check that both of loss_fn and layer that will be the input to our CNN is one of our loss functions and layers 
 "Conv_2D,MaxPooling,FC"
 
 ```python
@@ -303,7 +303,7 @@ def __init__(self,layers,loss):
 
 
 
-2. Using Forward Path to go through the input layers one by one respectively.
+- Using Forward Path to go through the input layers one by one respectively.
 
 ```python
  def forward(self,x):
@@ -317,7 +317,7 @@ def __init__(self,layers,loss):
         return x
 ```
 
-3. Calculating our loss through the forward path 
+- Calculating our loss through the forward path 
 
 ```python
 def loss(self,x,y):
@@ -330,7 +330,7 @@ def loss(self,x,y):
         return loss
 ```
 
-4. calculating backward path in order to decrease our loss and helping the model train
+- Calculating backward path in order to decrease our loss and helping the model train
 
 
 ```python
